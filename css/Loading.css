@@ -1,0 +1,38 @@
+@charset "utf-8";
+.con{
+    margin-top: -100vh;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    display: none;
+}
+.load{
+    position: relative; 
+    display: flex;   
+}
+.load .dot{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-attachment: fixed;/*设置背景图像是否固定或者随
+    着页面的其余部分滚动。*/
+    background: rgb(120, 214, 214);
+    margin: 20px 0 0 20px;
+    border-radius: 50%;
+    animation: dotanim 1s infinite linear;
+    animation-delay: calc(0.1s * var(--i));/*执行效果延迟*/
+}
+
+@keyframes dotanim{
+    0%{
+        transform: scale(0.2);
+    }
+    10%{
+        transform: scale(1);
+    }
+    50%,100%{
+        transform: scale(0.2);
+    }
+}
